@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>Common Hash Functions</h1>
+  <p>
+    In this, we will be looking at three of the most popular hash functions:
+  </p>
+  <ol>
+    <li>MD5</li>
+    <li>SHA1</li>
+    <li>SHA2</li>
+  </ol>
+  <hr></hr>
+  <p>
+    The hashes of the string "hello world" are as follows:
+  </p>
+  <ol>
+    <li>MD5:{{md5}}
+    <li>SHA1:{{sha1}}
+    <li>SHA2:{{sha2}}
+  </ol>
+  <p>
+    If you want to compute your own password's hashes, click the following link:
+    <a href="/compute">Compute Hashes</a>
+  </p>
+{% endblock %}

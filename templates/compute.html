@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+
+<h1>Hash Compute</h1>
+<a href="/">Home</a>
+<p>Please Enter your input and choose the hash function below</p>
+<br></br>
+
+<form method="post" action="/result">
+  <label for="itext">Input Value</label>
+  <input name="itext" type="text" id="itext" required />
+
+  <br></br>
+  <label><u>Hash Function</u></label>
+  <br></br>
+
+    <label for="MD5">MD5 Function:</label>
+    <input type="radio" id="MD5" name="h_function" value="md5" required />
+
+    <label for="SHA1">  SHA1 Function:</label>
+    <input type="radio" id="SHA1" name="h_function" value="sha1" required />
+
+    <label for="SHA2">  SHA2 Function:</label>
+    <input type="radio" id="sha2" name="h_function" value="sha2" required />
+
+  <br></br>
+  <input type="submit" value="Calculate" />
+</form>
+{% block results %}
+{% endblock %}
+{% endblock %}
