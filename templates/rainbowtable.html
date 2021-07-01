@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+  <p> The previously entered inputs and their hashes are as follows: </p>
+
+  {% for hashes in hlist %}
+    <li>{{ hashes[0] }}           {{ hashes[1] }}<br>MD5:      {{ hashes[2] }}<br>SHA1:
+  {{ hashes[3] }}<br>SHA256:      {{ hashes[4] }}</li>
+    <br></br>
+  {% endfor %}
+{% endblock %}

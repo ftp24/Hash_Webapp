@@ -4,7 +4,6 @@
 <h1>Hash Compute</h1>
 <a href="/">Home</a>
 <p>Please Enter your input and choose the hash function below</p>
-<br></br>
 
 <form method="post" action="/result">
   <label for="itext">Input Value</label>
@@ -24,8 +23,18 @@
     <input type="radio" id="sha2" name="h_function" value="sha2" required />
 
   <br></br>
+<label><input name="save" type="checkbox" value="exclude" />
+   Do you want to exclude your input from the rainbow table?</label>
+
+  <br></br>
   <input type="submit" value="Calculate" />
 </form>
 {% block results %}
 {% endblock %}
+
+<p>
+  If you want to see previously entered passwords
+  <a href="/rainbowtable">Rainbow table</a>
+</p>
+
 {% endblock %}
